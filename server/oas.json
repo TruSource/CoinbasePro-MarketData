@@ -1,0 +1,184 @@
+{
+  "components": {
+    "securitySchemes": {}
+  },
+  "paths": {
+    "/time": {
+      "get": {
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        },
+        "operationId": "getTime"
+      }
+    },
+    "/products": {
+      "get": {
+        "operationId": "getProducts",
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/products/{productId}/ticker": {
+      "get": {
+        "operationId": "getTicker",
+        "parameters": [
+          {
+            "example": "BTC-USD",
+            "name": "productId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/products/{productId}/trades": {
+      "get": {
+        "operationId": "getTrades",
+        "parameters": [
+          {
+            "example": "BTC-USD",
+            "name": "productId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/currencies": {
+      "get": {
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        },
+        "operationId": "getCurrencies"
+      }
+    },
+    "/products/{productId}/stats": {
+      "get": {
+        "operationId": "getStats",
+        "parameters": [
+          {
+            "example": "BTC-USD",
+            "name": "productId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    },
+    "/products/{productId}/candles": {
+      "get": {
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        },
+        "operationId": "getCandles",
+        "parameters": [
+          {
+            "example": "BTC-USD",
+            "name": "productId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "schema": {
+              "type": "number"
+            },
+            "example": 3600,
+            "name": "granularity",
+            "required": false,
+            "in": "query"
+          }
+        ]
+      }
+    },
+    "/products/{productId}/book": {
+      "get": {
+        "operationId": "getBook",
+        "parameters": [
+          {
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            },
+            "example": "BTC-USD",
+            "name": "productId"
+          },
+          {
+            "schema": {
+              "type": "number"
+            },
+            "example": 1,
+            "name": "level",
+            "required": false,
+            "in": "query"
+          }
+        ],
+        "description": "Auto generated using TruSource",
+        "responses": {
+          "200": {
+            "description": "Auto generated using TruSource"
+          }
+        }
+      }
+    }
+  },
+  "info": {
+    "x-category": "finance",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://docs.pro.coinbase.com/#market-data"
+    },
+    "description": "The Market Data API is an unauthenticated set of endpoints for retrieving market data. These endpoints provide snapshots of market data.",
+    "title": "MarketData",
+    "x-provider": "CoinbasePro"
+  },
+  "servers": [
+    {
+      "url": "https://api.pro.coinbase.com"
+    }
+  ],
+  "openapi": "3.0.3"
+}
